@@ -34,7 +34,6 @@ func fetch(url string) URLResult {
 	hash := md5.Sum(body)
 	bodyString := string(body)[0:10] + " ... truncated for readability ..."
 	r := URLResult{URL: url, Body: bodyString, MD5: fmt.Sprintf("%x", hash)}
-	//fmt.Println(r)
 	return r
 }
 
